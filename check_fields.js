@@ -2,6 +2,7 @@ function check()
 {
     var $place = document.getElementById("eventPlace").value;
     var $date = document.getElementById("eventDate").value;
+    var $dateReg = /%d%d\//;
     
     if ($place == null || $place == "" || $date == null || $date == "")
     {
