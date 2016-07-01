@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <meta charset="UTF-8">
-  <title>Events publisher</title>
+    <meta charset="UTF-8">
+    <title>Events publisher</title>
+    <script src="check_fields.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+      $(function() {
+       $( "#eventDate" ).datepicker();
+      });
+    </script>
   </head>
 
   <body>
-    <script src="check_fields.js"></script>
     Publish your event below:
     <form onsubmit="return check()">
       <br>Place of the event: <input type="text" id="eventPlace"><br>
