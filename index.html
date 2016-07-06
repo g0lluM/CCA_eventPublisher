@@ -3,23 +3,36 @@
   <head>
     <meta charset="UTF-8">
     <title>Events publisher</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="jquery-1.10.2.js"></script>
+    <script src="jquery-ui.js"></script>
     <script src="check_fields.js"></script>
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script>
-      $(function() {
-       $( "#eventDate" ).datepicker();
-      });
-    </script>
   </head>
-
+  
   <body>
-    Publish your event below:
-    <form onsubmit="return check()">
-      <br>Place of the event: <input type="text" id="eventPlace"><br>
-      Date of the event: <input type="text" id="eventDate"><br>
-      Abstract of the event: <input type="textarea" id="eventAbstract"><br>
-      <br><input type="submit" value="Add event">
-    </form>  
+    <div class="container">
+      <h1>Publish your event below:</h1>
+      <form>
+	<div class="row">
+	  <div class="col-md-6"><p>Place of the event*:</p>
+	    <p><input type="radio" name="City" value="London" selected="true"/>London</p>
+	    <p><input type="radio" name="City" value="Cambridge"/>Cambridge</p>
+      
+	    <p>Details*: <input type="text" id="eventPlace" required/></p>
+	    <p>Date of the event*: <input type="text" id="eventDate" required/></p>
+	    <p>Abstract of the event: <textarea rows=10 cols=40></textarea></p>
+	  </div>
+	  <div class="col-md-6">
+	    <p>Price*: <input type="radio" name="Price" value="Free" selected="true"/>Free <input type="radio" name="Price" value="Paying"/>Paying</p>
+	    
+	    <p>Speaker*: <input type="text" id="eventSpeaker" required/></p>     
+	    <p>Picture: <input type="file" name="filename" accept="image/gif, image/jpeg, image/png"/></p>
+	  
+	    <input type="submit" value="Add event"/>
+	  </div> 
+        </form>
+       </div>
+      </div> 
   </body>
 </html> 
